@@ -27,7 +27,7 @@ export async function search(language: string, projectCount: number) {
 }
 
 /**
- * Given a github repository sear
+ * Given a github repository, see what percent that top contributor has contributed.
  * @param repository
  */
 export async function handleRepository(
