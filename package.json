@@ -1,0 +1,37 @@
+{
+  "name": "bus-factor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "lint": "eslint . --ext .ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottfrasso/bus-factor.git"
+  },
+  "engines": {
+    "npm": ">=8.1.0",
+    "node": ">=16.13.0"
+  },
+  "author": "scottfrasso@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scottfrasso/bus-factor/issues"
+  },
+  "homepage": "https://github.com/scottfrasso/bus-factor#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "fixed-width-string": "^2.0.0",
+    "minimist": "^1.2.6"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.14.0",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
