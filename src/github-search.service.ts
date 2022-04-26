@@ -8,6 +8,12 @@ export type SearchResult = {
 
 const github = new Github()
 
+/**
+ * Given a  language and a projectCount search for those projects for a bus factor of 1. Where the
+ * bus factor of 1 is any project where 1 contributor contributed 75% or more of the contributions.
+ * @param language
+ * @param projectCount
+ */
 export async function search(language: string, projectCount: number) {
   const repositoryList = await github.getRepositories(language, projectCount)
 
@@ -20,6 +26,10 @@ export async function search(language: string, projectCount: number) {
   )
 }
 
+/**
+ * Given a github repository sear
+ * @param repository
+ */
 export async function handleRepository(
   repository: RepositoryResultItem
 ): Promise<SearchResult | undefined> {
@@ -40,6 +50,7 @@ export async function handleRepository(
     totalContributions += contributor.contributions
   }
 
+  // The contributor list is sorted by contributions descending, so the first one is the top contributor
   const topContributor = contributors[0]
   const percentContributed = topContributor.contributions / totalContributions
 

@@ -4,6 +4,7 @@ import minimist from 'minimist'
 import { search } from './github-search.service'
 
 async function init(): Promise<void> {
+  // I could have used a more complicated argument parser here but this is the simplest and fastest way
   const args = minimist(process.argv.slice(2))
   const language = args['language']
   if (!language) {

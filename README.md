@@ -38,9 +38,9 @@ Run it and select your language and project count
 
 `npm run start -- --language rust --project_count 50`
 
-Note: You have to include the `--` after `start`
+Note: You have to include the `--` after `start` so that node knows thats the end of the node options
 
-It should output something like this
+It should output something like this:
 
 ```
 project:996.ICU              user:996icu               percentage: 0.78
